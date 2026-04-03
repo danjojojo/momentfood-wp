@@ -11,19 +11,11 @@ if ($restaurants) {
         ?>
 
         <div>
-            <p> <?php echo get_field('name', $restaurant->ID); ?> </p>
-            <?php
-            $image_array = get_field('images', $restaurant->ID);
-
-        if ($image_array) {
-            $logo = $image_array['brand_logo'];
-            $wp_desktop = $image_array['brand_wp_desktop'];
-            $wp_mobile = $image_array['brand_wp_mobile'];
-            echo '<img src="'.esc_url($logo).'" alt="Restaurant Logo">';
-            echo '<img src="'.esc_url($wp_desktop).'" alt="Restaurant Desktop Image">';
-            echo '<img src="'.esc_url($wp_mobile).'" alt="Restaurant Mobile Image">';
-        }
-        ?>
+            <pre><?php var_dump(get_field('name', $restaurant->ID)); ?></pre>
+            <pre><?php var_dump(get_field('colors', $restaurant->ID)); ?></pre>
+            <pre><?php var_dump(get_field('images', $restaurant->ID)); ?></pre>
+            <pre><?php var_dump(get_field('order_now', $restaurant->ID)); ?></pre>
+            <pre><?php var_dump(get_field('reserve', $restaurant->ID)); ?></pre>
 
             <a href="<?php echo get_permalink($restaurant); ?>">Read more</a>
         </div>
