@@ -13,6 +13,10 @@ web/app/cache/*
 web/wp
 web/.htaccess
 
+# Packages
+packages
+packages/*
+
 # Logs
 *.log
 
